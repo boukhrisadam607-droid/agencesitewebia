@@ -12,9 +12,7 @@
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
     .nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 2rem;border-bottom:1px solid var(--border2);background:var(--bg);position:sticky;top:0;z-index:10}
-    .logo{font-size:18px;font-weight:600;color:var(--text)}.logo span{color:var(--blue)}
     .nav-links{display:flex;gap:1.5rem}.nav-links a{font-size:14px;color:var(--text-sec);text-decoration:none}
-    .nav-links a:hover{color:var(--text)}
     .btn-nav{background:var(--blue);color:#fff;border:none;padding:8px 18px;border-radius:var(--radius);font-size:13px;cursor:pointer;font-family:inherit}
     .hero{padding:5rem 2rem 4rem;text-align:center}
     .badge{display:inline-flex;align-items:center;gap:6px;background:var(--info-bg);color:var(--info);font-size:12px;padding:4px 12px;border-radius:20px;margin-bottom:1.2rem}
@@ -23,9 +21,7 @@
     .hero>p{font-size:17px;color:var(--text-sec);max-width:500px;margin:0 auto 2rem;line-height:1.7}
     .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
     .btn-p{background:var(--blue);color:#fff;border:none;padding:13px 30px;border-radius:var(--radius);font-size:15px;cursor:pointer;font-family:inherit;font-weight:500}
-    .btn-p:hover{background:var(--blue-dark)}
     .btn-s{background:transparent;color:var(--text);border:1px solid var(--border2);padding:13px 30px;border-radius:var(--radius);font-size:15px;cursor:pointer;font-family:inherit}
-    .btn-s:hover{background:var(--bg2)}
     .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:520px;margin:3rem auto 0}
     .stat{background:var(--bg2);border-radius:var(--radius);padding:1rem;text-align:center;border:1px solid var(--border2)}
     .stat-num{font-size:24px;font-weight:700;color:var(--text)}
@@ -100,7 +96,6 @@
     footer p{font-size:13px;color:var(--text-sec)}
     .footer-links{display:flex;gap:1rem}
     .footer-links a{font-size:13px;color:var(--text-sec);text-decoration:none}
-    .footer-links a:hover{color:var(--text)}
     @media(max-width:700px){.grid2,.bot-grid{grid-template-columns:1fr}.hero h1{font-size:28px}.nav-links{display:none}.chat-box{width:100%;height:100%;border-radius:0}.chat-overlay{padding:0}}
   </style>
 </head>
@@ -135,12 +130,8 @@
   <p class="sec-title">Nos offres</p>
   <p class="sec-sub">Des prix clairs, sans surprise</p>
   <div class="grid2">
-
     <div class="card">
-      <div class="card-header">
-        <i class="ti ti-layout"></i>
-        <h3>Site vitrine</h3>
-      </div>
+      <div class="card-header"><i class="ti ti-layout"></i><h3>Site vitrine</h3></div>
       <div class="card-body">
         <p class="desc">Site professionnel moderne, rapide et optimisé Google. Livré en 7 jours.</p>
         <div class="price">800€ <span>one-time</span></div>
@@ -154,12 +145,8 @@
         </ul>
       </div>
     </div>
-
     <div class="card">
-      <div class="card-header">
-        <i class="ti ti-robot"></i>
-        <h3>Chatbot IA</h3>
-      </div>
+      <div class="card-header"><i class="ti ti-robot"></i><h3>Chatbot IA</h3></div>
       <div class="card-body">
         <p class="desc">Assistant intelligent qui répond à vos clients et envoie une fiche client complète par email.</p>
         <div class="price">500€ <span>one-time</span></div>
@@ -173,13 +160,9 @@
         </ul>
       </div>
     </div>
-
     <div class="card feat">
       <div class="feat-badge">⭐ Meilleure offre</div>
-      <div class="card-header">
-        <i class="ti ti-rocket"></i>
-        <h3>Pack complet</h3>
-      </div>
+      <div class="card-header"><i class="ti ti-rocket"></i><h3>Pack complet</h3></div>
       <div class="card-body">
         <p class="desc">Site vitrine + Chatbot IA intégré. Tout inclus pour démarrer fort.</p>
         <div class="price">1 100€ <span>au lieu de 1 300€</span></div>
@@ -194,12 +177,8 @@
         </ul>
       </div>
     </div>
-
     <div class="card">
-      <div class="card-header">
-        <i class="ti ti-settings-automation"></i>
-        <h3>Automatisation IA</h3>
-      </div>
+      <div class="card-header"><i class="ti ti-settings-automation"></i><h3>Automatisation IA</h3></div>
       <div class="card-body">
         <p class="desc">Bots, scripts et workflows sur mesure pour automatiser vos tâches répétitives.</p>
         <div class="price-devis">Sur devis</div>
@@ -213,7 +192,6 @@
         </ul>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -223,7 +201,7 @@
   <div class="bot-grid">
     <div class="bot-left">
       <h3>Un assistant qui qualifie vos clients automatiquement</h3>
-      <p>Fini les longs échanges d'emails. L'assistant engage la conversation, collecte toutes les infos essentielles et vous envoie une fiche client prête à l'emploi — directement dans votre boîte mail.</p>
+      <p>Fini les longs échanges d'emails. L'assistant engage la conversation, collecte toutes les infos essentielles et vous envoie une fiche client prête à l'emploi.</p>
       <div class="steps">
         <div class="step"><div class="dot">1</div><div><strong>Accueil</strong><p>L'assistant engage la conversation dès l'arrivée du visiteur.</p></div></div>
         <div class="step"><div class="dot">2</div><div><strong>Collecte des infos</strong><p>Il demande nom complet, email, téléphone, projet et budget — une question à la fois.</p></div></div>
@@ -239,14 +217,12 @@
           <div class="online-wrap"><div class="online-dot"></div><span class="online-txt">En ligne</span></div>
         </div>
         <div class="chat-msgs">
-          <div class="msg b">Bonjour et bienvenue ! Je suis Lucas 😊 Comment puis-je vous aider ?</div>
+          <div class="msg b">Bonjour ! Je suis Lucas 😊 Comment puis-je vous aider ?</div>
           <div class="msg u">Je veux un site pour ma boutique</div>
           <div class="msg b">Avec plaisir ! Votre nom complet ?</div>
           <div class="msg u">Thomas Martin</div>
           <div class="msg b">Votre email ?</div>
           <div class="msg u">thomas@gmail.com</div>
-          <div class="msg b">Votre téléphone ?</div>
-          <div class="msg u">06 12 34 56 78</div>
           <div class="msg b">Parfait Thomas ! On vous rappelle sous 24h. 👍</div>
         </div>
       </div>
@@ -262,13 +238,9 @@
 
 <footer>
   <p>© 2025 AgenceSiteWebIA</p>
-  <div class="footer-links">
-    <a href="#">Mentions légales</a>
-    <a href="#">Contact</a>
-  </div>
+  <div class="footer-links"><a href="#">Mentions légales</a><a href="#">Contact</a></div>
 </footer>
 
-<!-- CHAT OVERLAY -->
 <div class="chat-overlay" id="chatOverlay" onclick="handleOverlayClick(event)">
   <div class="chat-box">
     <div class="chat-head">
@@ -291,26 +263,118 @@
 
 <script>
 const SYSTEM_PROMPT=`Tu es Lucas, conseiller chez AgenceSiteWebIA. Professionnel, souriant et chaleureux.
-RÈGLES :
+REGLES :
 - Ne jamais dire que tu es une IA. Tu es Lucas, conseiller humain.
 - Messages courts : 1-2 phrases max.
 - Une seule question à la fois.
 - Ne jamais répéter une question déjà posée.
-- Accuse réception chaleureusement avant chaque nouvelle question : "Super !", "Parfait !", "Noté !", "Excellent !"
+- Accuse réception chaleureusement avant chaque nouvelle question.
 - Collecte dans l'ordre : prénom, nom, email, téléphone, projet, budget.
 - Une fois tout collecté, confirme et dis que tu recontactes sous 24h.
 - Services : site vitrine 800€+100€/mois, chatbot 500€+100€/mois, pack 1100€+150€/mois, automatisation sur devis.
-- Ton chaleureux, emojis discrets (😊 ✅ 👍), jamais de listes.`;
+- Ton chaleureux, emojis discrets, jamais de listes.`;
+
 let history=[],isTyping=false,chatOpened=false,ficheShown=false;
-function openChat(){document.getElementById('chatOverlay').classList.add('open');if(!chatOpened){chatOpened=true;setTimeout(()=>botSay("Bonjour et bienvenue ! Je suis Lucas, ravi de vous accueillir 😊 Comment puis-je vous aider ?"),600)}setTimeout(()=>document.getElementById('chatInput').focus(),300)}
+
+function openChat(){
+  document.getElementById('chatOverlay').classList.add('open');
+  if(!chatOpened){
+    chatOpened=true;
+    setTimeout(()=>botSay("Bonjour et bienvenue ! Je suis Lucas, ravi de vous accueillir 😊 Comment puis-je vous aider ?"),600);
+  }
+  setTimeout(()=>document.getElementById('chatInput').focus(),300);
+}
+
 function closeChat(){document.getElementById('chatOverlay').classList.remove('open')}
 function handleOverlayClick(e){if(e.target===document.getElementById('chatOverlay'))closeChat()}
 function handleKey(e){if(e.key==='Enter')sendMessage()}
-function addMsg(text,type){const msgs=document.getElementById('chatMessages');const div=document.createElement('div');div.className='msg '+type;div.textContent=text;msgs.insertBefore(div,document.getElementById('typing'));msgs.scrollTop=msgs.scrollHeight}
-function showTyping(show){document.getElementById('typing').style.display=show?'flex':'none';document.getElementById('chatMessages').scrollTop=9999}
-function botSay(text){showTyping(true);const delay=Math.min(700+text.length*16,2000);setTimeout(()=>{showTyping(false);addMsg(text,'b');isTyping=false;document.getElementById('sendBtn').disabled=false},delay)}
-async function sendMessage(){const input=document.getElementById('chatInput');const text=input.value.trim();if(!text||isTyping)return;input.value='';isTyping=true;document.getElementById('sendBtn').disabled=true;addMsg(text,'u');history.push({role:'user',content:text});showTyping(true);try{const res=await fetch('https://lucas-proxy.boukhrisadam607.workers.dev/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:150,system:SYSTEM_PROMPT,messages:history})});const data=await res.json();const reply=data.content.[0].text||"Je reviens vers vous dans un instant.";history.push({role:'assistant',content:reply});showTyping(false);addMsg(reply,'b');isTyping=false;document.getElementById('sendBtn').disabled=false;maybeShowFiche()}catch(e){showTyping(false);addMsg("Une erreur est survenue, réessayez 😊",'b');isTyping=false;document.getElementById('sendBtn').disabled=false}}
-function maybeShowFiche(){if(ficheShown||history.length<12)return;const u=history.filter(m=>m.role==='user').map(m=>m.content);const hasEmail=u.some(t=>t.includes('@'));const hasPhone=u.some(t=>/\d{8,}/.test(t.replace(/\s/g,'')));if(!hasEmail||!hasPhone)return;ficheShown=true;fetch("https://formspree.io/f/mbdegzqv",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({email:u.find(t=>t.includes("@"))||"—",telephone:u.find(t=>/\d{8,}/.test(t.replace(/\s/g,"")))||"—",projet:u.find(t=>t.toLowerCase().match(/site|chatbot|pack|auto/))||"—",date:new Date().toLocaleDateString("fr-FR")})});const email=u.find(t=>t.includes('@'))||'—';const phone=u.find(t=>/\d{8,}/.test(t.replace(/\s/g,'')))||'—';const projet=u.find(t=>t.toLowerCase().match(/site|chatbot|pack|auto/))||'—';setTimeout(()=>{const msgs=document.getElementById('chatMessages');const div=document.createElement('div');div.className='fiche-card';div.innerHTML='<div class="ftitle">✅ Fiche client enregistrée</div><div class="frow"><span>Email</span><span>'+email+'</span></div><div class="frow"><span>Téléphone</span><span>'+phone+'</span></div><div class="frow"><span>Projet</span><span>'+projet+'</span></div><div class="frow"><span>Statut</span><span style="color:var(--blue)">À contacter sous 24h</span></div>';msgs.insertBefore(div,document.getElementById('typing'));msgs.scrollTop=msgs.scrollHeight},800)}
+
+function addMsg(text,type){
+  const msgs=document.getElementById('chatMessages');
+  const div=document.createElement('div');
+  div.className='msg '+type;
+  div.textContent=text;
+  msgs.insertBefore(div,document.getElementById('typing'));
+  msgs.scrollTop=msgs.scrollHeight;
+}
+
+function showTyping(show){
+  document.getElementById('typing').style.display=show?'flex':'none';
+  document.getElementById('chatMessages').scrollTop=9999;
+}
+
+function botSay(text){
+  showTyping(true);
+  const delay=Math.min(700+text.length*16,2000);
+  setTimeout(()=>{
+    showTyping(false);
+    addMsg(text,'b');
+    isTyping=false;
+    document.getElementById('sendBtn').disabled=false;
+  },delay);
+}
+
+async function sendMessage(){
+  const input=document.getElementById('chatInput');
+  const text=input.value.trim();
+  if(!text||isTyping)return;
+  input.value='';
+  isTyping=true;
+  document.getElementById('sendBtn').disabled=true;
+  addMsg(text,'u');
+  history.push({role:'user',content:text});
+  showTyping(true);
+  try{
+    const res=await fetch('https://lucas-proxy.boukhrisadam607.workers.dev/',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-haiku-4-5-20251001',
+        max_tokens:150,
+        system:SYSTEM_PROMPT,
+        messages:history
+      })
+    });
+    const data=await res.json();
+    const reply=(data.content&&data.content[0]&&data.content[0].text)?data.content[0].text:"Je reviens vers vous dans un instant.";
+    history.push({role:'assistant',content:reply});
+    showTyping(false);
+    addMsg(reply,'b');
+    isTyping=false;
+    document.getElementById('sendBtn').disabled=false;
+    maybeShowFiche();
+  }catch(e){
+    showTyping(false);
+    addMsg("Une erreur est survenue, réessayez 😊",'b');
+    isTyping=false;
+    document.getElementById('sendBtn').disabled=false;
+  }
+}
+
+function maybeShowFiche(){
+  if(ficheShown||history.length<12)return;
+  const u=history.filter(m=>m.role==='user').map(m=>m.content);
+  const hasEmail=u.some(t=>t.includes('@'));
+  const hasPhone=u.some(t=>/\d{8,}/.test(t.replace(/\s/g,'')));
+  if(!hasEmail||!hasPhone)return;
+  ficheShown=true;
+  const email=u.find(t=>t.includes('@'))||'—';
+  const phone=u.find(t=>/\d{8,}/.test(t.replace(/\s/g,'')))||'—';
+  const projet=u.find(t=>t.toLowerCase().match(/site|chatbot|pack|auto/))||'—';
+  fetch("https://formspree.io/f/mbdegzqv",{
+    method:"POST",
+    headers:{"Content-Type":"application/json","Accept":"application/json"},
+    body:JSON.stringify({email:email,telephone:phone,projet:projet,date:new Date().toLocaleDateString("fr-FR")})
+  });
+  setTimeout(()=>{
+    const msgs=document.getElementById('chatMessages');
+    const div=document.createElement('div');
+    div.className='fiche-card';
+    div.innerHTML='<div class="ftitle">✅ Fiche client enregistrée</div><div class="frow"><span>Email</span><span>'+email+'</span></div><div class="frow"><span>Téléphone</span><span>'+phone+'</span></div><div class="frow"><span>Projet</span><span>'+projet+'</span></div><div class="frow"><span>Statut</span><span style="color:var(--blue)">À contacter sous 24h</span></div>';
+    msgs.insertBefore(div,document.getElementById('typing'));
+    msgs.scrollTop=msgs.scrollHeight;
+  },800);
+}
 </script>
 </body>
 </html>
