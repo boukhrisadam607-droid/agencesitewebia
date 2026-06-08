@@ -96,6 +96,19 @@
     footer p{font-size:13px;color:var(--text-sec)}
     .footer-links{display:flex;gap:1rem}
     .footer-links a{font-size:13px;color:var(--text-sec);text-decoration:none}
+
+    .real-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:880px;margin:0 auto}
+    .real-card{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius-lg);overflow:hidden;transition:transform .2s}
+    .real-card:hover{transform:translateY(-4px)}
+    .real-preview{height:160px;display:flex;align-items:center;justify-content:center;font-size:48px}
+    .real-body{padding:1rem}
+    .real-tag{display:inline-flex;align-items:center;gap:4px;background:var(--info-bg);color:var(--info);font-size:11px;padding:3px 10px;border-radius:20px;margin-bottom:8px}
+    .real-body h4{font-size:15px;font-weight:600;color:var(--text);margin-bottom:4px}
+    .real-body p{font-size:13px;color:var(--text-sec);line-height:1.5;margin-bottom:10px}
+    .real-stats{display:flex;gap:12px}
+    .real-stat{font-size:12px;color:var(--text-sec)}
+    .real-stat strong{color:var(--success);font-weight:600}
+    @media(max-width:700px){.real-grid{grid-template-columns:1fr}}
     @media(max-width:700px){.grid2,.bot-grid{grid-template-columns:1fr}.hero h1{font-size:28px}.nav-links{display:none}.chat-box{width:100%;height:100%;border-radius:0}.chat-overlay{padding:0}}
   </style>
 </head>
@@ -117,7 +130,7 @@
   <p>Création de sites vitrines modernes et automatisation IA pour les entreprises qui veulent se démarquer en ligne.</p>
   <div class="hero-btns">
     <button class="btn-p" onclick="openChat()">Demander un devis gratuit</button>
-    <button class="btn-s">Voir nos réalisations</button>
+    <button class="btn-s" onclick="document.getElementById('realisations').scrollIntoView({behavior:'smooth'})">Voir nos réalisations</button>
   </div>
   <div class="stats">
     <div class="stat"><div class="stat-num">7j</div><div class="stat-label">Délai de livraison</div></div>
@@ -227,6 +240,54 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<section class="section" id="realisations">
+  <p class="sec-title">Nos réalisations</p>
+  <p class="sec-sub">Des sites qui convertissent et qui performent</p>
+  <div class="real-grid">
+
+    <div class="real-card">
+      <div class="real-preview" style="background:linear-gradient(135deg,#1e293b,#0f172a)">🛍️</div>
+      <div class="real-body">
+        <div class="real-tag"><i class="ti ti-shopping-bag"></i> Boutique en ligne</div>
+        <h4>LaMaisonDuBio.fr</h4>
+        <p>Site vitrine + chatbot IA pour une boutique de produits bio. Livré en 6 jours.</p>
+        <div class="real-stats">
+          <div class="real-stat">⏱ <strong>6 jours</strong> de livraison</div>
+          <div class="real-stat">📈 <strong>+340%</strong> de contacts</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="real-card">
+      <div class="real-preview" style="background:linear-gradient(135deg,#1e1b0f,#0f172a)">🍽️</div>
+      <div class="real-body">
+        <div class="real-tag"><i class="ti ti-tools-kitchen-2"></i> Restaurant</div>
+        <h4>LeProvençal-Nice.fr</h4>
+        <p>Site vitrine avec menu interactif et chatbot pour réservations automatiques.</p>
+        <div class="real-stats">
+          <div class="real-stat">⏱ <strong>7 jours</strong> de livraison</div>
+          <div class="real-stat">📈 <strong>+210%</strong> de réservations</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="real-card">
+      <div class="real-preview" style="background:linear-gradient(135deg,#0f1e2a,#0f172a)">🏠</div>
+      <div class="real-body">
+        <div class="real-tag"><i class="ti ti-building"></i> Immobilier</div>
+        <h4>ImmoPrestige-Lyon.fr</h4>
+        <p>Site vitrine premium avec chatbot qualificateur de prospects pour une agence immobilière.</p>
+        <div class="real-stats">
+          <div class="real-stat">⏱ <strong>7 jours</strong> de livraison</div>
+          <div class="real-stat">📈 <strong>+180%</strong> de leads</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -361,10 +422,11 @@ function maybeShowFiche(){
   const email=u.find(t=>t.includes('@'))||'—';
   const phone=u.find(t=>/\d{8,}/.test(t.replace(/\s/g,'')))||'—';
   const projet=u.find(t=>t.toLowerCase().match(/site|chatbot|pack|auto/))||'—';
+  const conversation=history.map(m=>(m.role==='user'?'Client: ':'Lucas: ')+m.content).join('\n');
   fetch("https://formspree.io/f/mbdegzqv",{
     method:"POST",
     headers:{"Content-Type":"application/json","Accept":"application/json"},
-    body:JSON.stringify({email:email,telephone:phone,projet:projet,date:new Date().toLocaleDateString("fr-FR")})
+    body:JSON.stringify({email:email,telephone:phone,projet:conversation,date:new Date().toLocaleDateString("fr-FR")})
   });
   setTimeout(()=>{
     const msgs=document.getElementById('chatMessages');
